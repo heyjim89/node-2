@@ -10,8 +10,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/:page', function(req, res){
-	
-    fs.readFile(req.params.page, function(err, data) {
+    fs.readFile('req.params.page', function(err, data) {
         res.header('Content-Type', 'text/html');
         res.send(data);
     });
